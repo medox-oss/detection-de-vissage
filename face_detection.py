@@ -54,7 +54,7 @@ def detecter_visages(image, net, seuil_confiance=0.5):
     return liste_coordonnees
 
 
-# BLOC DE TEST INDIVIDUEL (Abdellah)
+# BLOC DE TEST INDIVIDUEL 
 if __name__ == "__main__":
     print("--- Test du module IA intégrant le prétraitement de Mohamed ---")
     
