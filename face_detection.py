@@ -3,7 +3,7 @@ import numpy as np
 import os
 import urllib.request
 
-# INTÉGRATION : Importation du module de ton collègue Mohamed
+# INTÉGRATION du file de Mohamed
 import filtres 
 
 def initialiser_modele_dnn():
@@ -54,20 +54,4 @@ def detecter_visages(image, net, seuil_confiance=0.5):
     return liste_coordonnees
 
 
-# BLOC DE TEST INDIVIDUEL 
-if __name__ == "__main__":
-    print("--- Test du module IA intégrant le prétraitement de Mohamed ---")
-    
-    modele = initialiser_modele_dnn()
-    
-    # Utilisation du chemin spécifique demandé
-    chemin_test = r"C:\Games\Python\OpenCv\dataset\image_test.jpg" 
-    
-    # Appel de la fonction de chargement de Mohamed
-    image_test = filtres.load_img(chemin_test)
-    
-    if image_test is not None:
-        resultats = detecter_visages(image_test, modele)
-        print(f"L'IA a trouvé {len(resultats)} visage(s) ! Coordonnées : {resultats}")
-    else:
-        print(f"Erreur : Impossible de charger l'image depuis {chemin_test}")
+
